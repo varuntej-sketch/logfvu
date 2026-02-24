@@ -56,7 +56,8 @@ headers = {
     "Cache-Control": "no-cache, no-store",
     "Host": "jiotv.byte-vault.workers.dev",
     "Connection": "Keep-Alive",
-    "Accept-Encoding": "gzip"
+    "Accept-Encoding": "gzip",
+    "X-Forwarded-For": "103.48.198.141"
 }
 
 content = requests.get(url, headers=headers, params=querystring).text
