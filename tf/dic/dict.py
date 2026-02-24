@@ -25,7 +25,7 @@ def decrypt_content(content: str) -> str:
     part3 = trimmed_content[-10:]
     encrypted_data_str = part1 + part2 + part3
 
-    iv_base64 = trimmed_content[10:34]
+    iv_base64 = trimmed_content[10:34] + "="
     key_base64 = trimmed_content[-54:-10]
 
     # Decode from Base64
@@ -60,6 +60,5 @@ headers = {
 }
 
 content = requests.get(url, headers=headers, params=querystring).text
-print(content)
 encrypted_base64 = decrypt_content(content)
 print(encrypted_base64)
