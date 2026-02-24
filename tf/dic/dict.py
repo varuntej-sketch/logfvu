@@ -3,7 +3,7 @@ import base64
 from Cryptodome.Cipher import AES
 from Cryptodome.Util.Padding import unpad
 
-Address = 'http://ddh:ddh@139.59.38.234:3128'
+Address = 'http://ddh:ddh@64.227.157.14:3128'
 proxy = {'https': Address}
 
 def decrypt_content(content: str) -> str:
