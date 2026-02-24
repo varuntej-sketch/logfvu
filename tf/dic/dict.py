@@ -60,5 +60,6 @@ headers = {
 }
 
 content = requests.get(url, headers=headers, params=querystring).text
-encrypted_base64 = decrypt_content(content)
-print(encrypted_base64)
+print(content)
+#encrypted_base64 = decrypt_content(content)
+#print(encrypted_base64)
