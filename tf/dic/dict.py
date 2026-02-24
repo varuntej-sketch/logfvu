@@ -3,6 +3,8 @@ import base64
 from Cryptodome.Cipher import AES
 from Cryptodome.Util.Padding import unpad
 
+Address = 'http://ddh:ddh@139.59.38.234:3128'
+proxy = {'https': Address}
 
 def decrypt_content(content: str) -> str:
   content = content.strip()
@@ -59,7 +61,7 @@ headers = {
     "X-Forwarded-For": "103.48.198.141"
 }
 
-content = requests.get(url, headers=headers, params=querystring).text
+content = requests.get(url, headers=headers, params=querystring, proxies=proxy).text
 print(content)
 #encrypted_base64 = decrypt_content(content)
 #print(encrypted_base64)
